@@ -6,20 +6,27 @@ import { useRouter } from 'next/router';
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const { type } = router.query;
+  const { asPath } = router;
 
-  let ogImage = 'https://s.rfi.fr/media/display/8a79660e-8d2f-11ec-8878-005056a90321/w:1280/p:16x9/maxresdefault-54.jpg';
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const fullUrl = `${baseUrl}${asPath}`;
+
+  let ogImage = `${baseUrl}/image1.png`;
   if (type === 'a') {
-    ogImage = 'https://s.rfi.fr/media/display/8a79660e-8d2f-11ec-8878-005056a90321/w:1280/p:16x9/maxresdefault-54.jpg';
+    ogImage = `${baseUrl}/image1.png`;
   } else if (type === 'b') {
-    ogImage = 'https://dpi.media/upload/imgs/default/MediciRenaissance/8.jpeg';
+    ogImage = `${baseUrl}/image2.png`;
   }
+
   return (
     <>
       <Head>
-        <meta property="og:title" content="mystery" />
+        <title>Mystery</title>
+        <meta property="og:title" content="Mystery" />
         <meta property="og:description" content="It's right if you don't understand, as there are usually some mysterious things hidden here." />
         <meta property="og:type" content="article" />
         <meta property="og:image" content={ogImage} />
+        <meta property="og:url" content={fullUrl} />
       </Head>
       <Component {...pageProps} />
     </>
