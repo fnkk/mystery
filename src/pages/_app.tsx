@@ -27,6 +27,13 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta property="og:type" content="website" />
         <meta property="og:image" content={ogImage} />
         <meta property="og:url" content={fullUrl} />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content={fullUrl} />
+        <meta name="twitter:title" content="Mystery" />
+        <meta name="twitter:description" content="It's right if you don't understand, as there are usually some mysterious things hidden here." />
+        <meta name="twitter:image" content={ogImage} />
+
       </Head>
       <Component {...pageProps} />
     </>
