@@ -14,7 +14,7 @@ export default function App({ Component, pageProps }: AppProps) {
   let ogImage = `${baseUrl}/image1.png`;
   if (type === 'a') {
     ogImage = `${baseUrl}/image1.png`;
-  } else if (type === 'b') {
+  } else if (type === 'z') {
     ogImage = `${baseUrl}/image2.png`;
   }
 
