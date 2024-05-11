@@ -16,6 +16,9 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
+        <meta property="og:title" content="mystery" />
+        <meta property="og:description" content="It's right if you don't understand, as there are usually some mysterious things hidden here." />
+        <meta property="og:type" content="website" />
         <meta property="og:image" content={ogImage} />
       </Head>
       <Component {...pageProps} />
