@@ -11,8 +11,8 @@ const nextConfig = {
         destination: '/?type=a'
       },
       {
-        source: '/type-z',
-        destination: '/?type=z'
+        source: '/type-y',
+        destination: '/?type=y'
       },
     ];
   },

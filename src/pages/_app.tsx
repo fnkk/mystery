@@ -11,16 +11,16 @@ export default function App({ Component, pageProps }: AppProps) {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
   const fullUrl = `${baseUrl}${asPath}`;
 
-  let ogImage = `${baseUrl}/image1.png`;
-  if (type === 'a') {
-    ogImage = `${baseUrl}/image1.png`;
-  } else if (type === 'z') {
-    ogImage = `${baseUrl}/image2.png`;
-  }
+  // let ogImage = `${baseUrl}/image1.png`;
+  // if (type === 'a') {
+  //   ogImage = `${baseUrl}/image1.png`;
+  // } else if (type === 'z') {
+  //   ogImage = `${baseUrl}/image2.png`;
+  // }
 
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>Mystery</title>
         <meta property="og:title" content="Mystery" />
         <meta property="og:description" content="It's right if you don't understand, as there are usually some mysterious things hidden here." />
@@ -34,7 +34,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="twitter:description" content="It's right if you don't understand, as there are usually some mysterious things hidden here." />
         <meta name="twitter:image" content={ogImage} />
 
-      </Head>
+      </Head> */}
       <Component {...pageProps} />
     </>
   );
