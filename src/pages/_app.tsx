@@ -24,7 +24,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <title>Mystery</title>
         <meta property="og:title" content="Mystery" />
         <meta property="og:description" content="It's right if you don't understand, as there are usually some mysterious things hidden here." />
-        <meta property="og:type" content="article" />
+        <meta property="og:type" content="website" />
         <meta property="og:image" content={ogImage} />
         <meta property="og:url" content={fullUrl} />
       </Head>
