@@ -48,11 +48,11 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const type = query.type || 'general';
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
-  let ogImage = `/image1.png`;
+  let ogImage = `https://mystery-jade.vercel.app/image1.png`;
   if (type === 'a') {
-    ogImage = `/image1.png`;
+    ogImage = `https://mystery-jade.vercel.app/image1.png`;
   } else if (type === 'y') {
-    ogImage = `/image2.png`;
+    ogImage = `https://mystery-jade.vercel.app/image2.png`;
   }
 
   return {
