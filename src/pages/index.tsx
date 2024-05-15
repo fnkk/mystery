@@ -37,6 +37,7 @@ export default function HomePage({ type, ogImage }: HomePageProps) {
           <p>?</p>
           <p>??</p>
           <p>???</p>
+          <p>{ogImage}</p>
         </div>
       </main>
     </>
@@ -48,11 +49,11 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const type = query.type || 'general';
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
-  let ogImage = `https://mystery-jade.vercel.app/image1.png`;
+  let ogImage = `/image1.png`;
   if (type === 'a') {
-    ogImage = `https://mystery-jade.vercel.app/image1.png`;
+    ogImage = `/image1.png`;
   } else if (type === 'y') {
-    ogImage = `https://mystery-jade.vercel.app/image2.png`;
+    ogImage = `/image2.png`;
   }
 
   return {
